@@ -3,6 +3,17 @@ from bs4 import BeautifulSoup
 from csv_loader import load_to_csv
 
 def scrapper():
+    """
+    Extracts product details from html files stored in the 'data' folder and
+    writes them to a csv file. The details extracted are product name, ratings,
+    sale price and actual price.
+
+    Args:
+        None
+
+    Returns:
+        A string indicating the status of csv creation.
+    """
     pd_data={'product_name':[],'ratings':[],'sale_price':[],'actual_price':[]}
     for files in os.listdir("data"):
         
